@@ -44,7 +44,7 @@
           ],
           "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
           "opacity": 1,
-          "layers": "paute:guarainag",
+          "layers": "paute:paute",
           "featureInfoTemplate": {
             "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
           },
