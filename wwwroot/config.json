@@ -1,6 +1,6 @@
 {
   /* Names of init files (in wwwroot/init), without the .json extension, to load by default */
-  "initializationUrls": ["simple"],
+  "initializationUrls": ["paute"],
   "parameters": {
     "googleUrlShortenerKey": null,
     "googleAnalyticsKey": null,
@@ -37,11 +37,11 @@
             link: "http://www.example.com"
         },*/
     // This is used in various text messages. You should also set <title> in index.html
-    "appName": "Terria Map",
+    "appName": "Paute - Geoportal, Datos y Visualizaciones - UBICA Ecuador",
     // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
     "brandBarElements": [
       "",
-      "<a target=\"_blank\" href=\"https://terria.io\"><img src=\"images/terria_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
+      "<a target=\"_blank\" href=\"https://terria.io\"><img src=\"images/paute_logo.png\" height=\"100\" title=\"Version: {{version}}\" /></a>",
       ""
     ],
     // Shown when things go wrong.
@@ -72,10 +72,10 @@
       "enabled": false,
       "debug": false,
       "languages": {
-        "en": "English",
-        "fr": "Français"
+        "es": "Español",
+        "en": "English"
       },
-      "fallbackLanguage": "en"
+      "fallbackLanguage": "es"
     },
     "searchBarConfig": {},
     "searchProviders": [
@@ -368,5 +368,9 @@
     //       content: "The way the dataset appears in the preview window. We recommend true colour to search for cloud-free images"
     //   }
     // ]
-  }
+  },
+  // "bingMapsKey": "2YOKSdOdEeH9gQOQpElOrW0oAQv0mao6bRbpVB4sFCij3WNj8RKJQQJ99CCACYeBjFe0f5JAAAgAZMP1uEQ",
+  "useCesiumIonTerrain": true,
+  "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkMTExOTJlMC04ODI5LTRjNmMtOTdiZi0zMDdhM2Q4MzZhODMiLCJpZCI6MTMyOTgsImlhdCI6MTc3MjUxMDk2Nn0.3nEodQMmW1W5enDojtMWowKLlRnPTrlryc0fjL54KhY",
+  "useCesiumIonBingImagery": true
 }

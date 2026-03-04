@@ -17,7 +17,7 @@ To get in touch:
 
 ## Major announcements
 
-Following is a list of major announcements and upgrades that may affect users maintaining a fork (copied from [TerriaJS announcements](https://github.com/TerriaJS/terriajs/discussions/categories/announcements)). For a full list of changes to TerriaMap, including the latest versions of TerriaJS included with each release please refer to [CHANGES.md](https://github.com/TerriaJS/TerriaMap/blob/main/CHANGES.md). 
+Following is a list of major announcements and upgrades that may affect users maintaining a fork (copied from [TerriaJS announcements](https://github.com/TerriaJS/terriajs/discussions/categories/announcements)). For a full list of changes to TerriaMap, including the latest versions of TerriaJS included with each release please refer to [CHANGES.md](https://github.com/TerriaJS/TerriaMap/blob/main/CHANGES.md).
 
 ### We have released TerriaJS v8.3.0 (2023-05-22)
 
@@ -46,3 +46,21 @@ What this means:
 - [The terriajs7 branch of TerriaMap](https://github.com/TerriaJS/TerriaMap/tree/terriajs7) will use v7 TerriaJS, but will not receive further updates
 - We have a [migration guide](https://docs.terria.io/guide/contributing/migration-guide/) available for users of TerriaJS v7 to help them upgrade their applications to TerriaJS v8
 - Please chat to us and the community in our [GitHub discussions forum](https://github.com/TerriaJS/terriajs/discussions)
+
+---
+
+## Local development
+
+This repo requires **Node `^20.19.0` or `^22.12.0`** (see `.nvmrc`). Node 21 is not supported by some dependencies and `yarn install` will fail with engine errors.
+
+```bash
+yarn install
+yarn gulp dev
+```
+
+If you see dependency version mismatch warnings from `gulp`, run:
+
+```bash
+yarn gulp sync-terriajs-dependencies
+yarn install
+```

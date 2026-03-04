@@ -1,0 +1,268 @@
+{
+  "homeCamera": {
+    "west": -79.12816626979978,
+    "south": -2.930101556944812,
+    "east": -78.46852340906884,
+    "north": -2.591796120470076
+  },
+  "catalog": [
+    {
+      "id": "img-paute",
+      "type": "group",
+      "name": "Imágenes aéreas - Paute",
+      "description": "Imágenes aéreas de la ciudad de Paute, Ecuador",
+      "isOpen": true,
+      "members": [
+        {
+          "type": "wms",
+          "name": "Paute - Cabecera Cantonal",
+          "id": "paute",
+          "isGeoServer": true,
+          "info": [
+            {
+              "name": "Description",
+              "content": "This information has been developed by the 100% Renewable Energy group from the Research School of Electrical, Energy and Materials Engineering at the Australia National University.  http://re100.eng.anu.edu.au<p>Potential sites for off-river PHES are identified using GIS algorithms with defined search criteria. The surveyed latitude range is up to 60 degrees north and south. Each identified site comprises an upper and lower reservoir pair plus a hypothetical tunnel route between the reservoirs, and includes data such as latitude, longitude, altitude, head, slope, water volume, water area, rock volume, dam wall length, water/rock ratio, energy storage potential and approximate relative cost (categories A-E).</p><p>Wall heights are adjusted for each reservoir in a pair to yield equal water volumes to achieve the targeted energy storage. Energy (= head * usable volume * g * efficiency) and storage-length combinations are provided in Table 1. The approximate number of people that a reservoirs could service for a 100% renewable electricity grid is listed in the third line.</p><style>  table, th, td {    border: 1px solid black;    padding: 5px;    text-align: center;  }</style><center><table>  <tr>    <th>Table 1</th> <th>2 GWh</th> <th>5 GWh</th> <th>15 GWh</th> <th>50 GWh</th> <th>150 GWh</th>  </tr>  <tr>    <th>6 hours</th> <td>✓</td> <td>✓</td> <td>✓</td> <td>✓</td> <td>-</td>  </tr>  <tr>    <th>18 hours</th> <td>-</td> <td>✓</td> <td>✓</td> <td>✓</td> <td>✓</td>  </tr>  <tr>    <th>Millions of people</th> <td>0.1</td> <td>0.25</td> <td>0.75</td> <td>2.5</td> <td>7.5</td>  </tr></table></center><p>Virtually all upper reservoirs are away from rivers, and none intrude on protected area or urban areas listed in the databases that we use below.  There may be local constraints that prevent use of a particular site that is not reflected in these databases. Please refer to the ANU 100% Renewable Energy website for additional information: http://re100.eng.anu.edu.au/global</p>"
+            },
+            {
+              "name": "Disclaimer",
+              "content": "None of the PHES sites discussed in this study have been the subject of geological, hydrological, environmental, heritage and other studies, and it is not known whether any particular site would be suitable. The commercial feasibility of developing these sites is unknown. As with all major engineering projects, diligent attention to quality assurance would be required for safety and efficacy.<p>There has been no investigation of land tenure apart from exclusion of some environmental areas and urban areas, and no discussions with land owners and managers. Nothing in this list of potential site locations implies any rights for development of these locations. Accuracy of the sites depends on the accuracy of the source data. There may be sites that fall into local protected areas or urban areas that are not identified by the source data.</p>"
+            },
+            {
+              "name": "Access and acknowledgements",
+              "content": "In publications that use this information please acknowledge the RE100 Group, Australian National University, http://re100.eng.anu.edu.au/"
+            },
+            {
+              "name": "Source Data",
+              "content": "Digital Terrain Model (DTM) https://earthexplorer.usgs.gov/ <p>World Database Protected Areas: https://www.protectedplanet.net/</p> <p>Urban extent:  HBASE http://sedac.ciesin.columbia.edu/data/set/ulandsat-hbase-v1/data-download</p> "
+            }
+          ],
+          "infoSectionOrder": [
+            "Disclaimer",
+            "Description",
+            "Access and acknowledgements",
+            "Source Data"
+          ],
+          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+          "opacity": 1,
+          "layers": "paute:guarainag",
+          "featureInfoTemplate": {
+            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+          },
+          "tileErrorHandlingOptions": {
+            "ignoreUnknownTileErrors": true
+          },
+          "shareKeys": [
+            "Root Group/Renewable Energy/Hydro/Storage/ANU STORES Worldwide/Pumped hydro: 150GWh 18h"
+          ]
+        },
+        {
+          "type": "wms",
+          "name": "Parroquia Guarainag",
+          "id": "c855dca8",
+          "isGeoServer": true,
+          "info": [
+            {
+              "name": "Description",
+              "content": "This information has been developed by the 100% Renewable Energy group from the Research School of Electrical, Energy and Materials Engineering at the Australia National University.  http://re100.eng.anu.edu.au<p>Potential sites for off-river PHES are identified using GIS algorithms with defined search criteria. The surveyed latitude range is up to 60 degrees north and south. Each identified site comprises an upper and lower reservoir pair plus a hypothetical tunnel route between the reservoirs, and includes data such as latitude, longitude, altitude, head, slope, water volume, water area, rock volume, dam wall length, water/rock ratio, energy storage potential and approximate relative cost (categories A-E).</p><p>Wall heights are adjusted for each reservoir in a pair to yield equal water volumes to achieve the targeted energy storage. Energy (= head * usable volume * g * efficiency) and storage-length combinations are provided in Table 1. The approximate number of people that a reservoirs could service for a 100% renewable electricity grid is listed in the third line.</p><style>  table, th, td {    border: 1px solid black;    padding: 5px;    text-align: center;  }</style><center><table>  <tr>    <th>Table 1</th> <th>2 GWh</th> <th>5 GWh</th> <th>15 GWh</th> <th>50 GWh</th> <th>150 GWh</th>  </tr>  <tr>    <th>6 hours</th> <td>✓</td> <td>✓</td> <td>✓</td> <td>✓</td> <td>-</td>  </tr>  <tr>    <th>18 hours</th> <td>-</td> <td>✓</td> <td>✓</td> <td>✓</td> <td>✓</td>  </tr>  <tr>    <th>Millions of people</th> <td>0.1</td> <td>0.25</td> <td>0.75</td> <td>2.5</td> <td>7.5</td>  </tr></table></center><p>Virtually all upper reservoirs are away from rivers, and none intrude on protected area or urban areas listed in the databases that we use below.  There may be local constraints that prevent use of a particular site that is not reflected in these databases. Please refer to the ANU 100% Renewable Energy website for additional information: http://re100.eng.anu.edu.au/global</p>"
+            },
+            {
+              "name": "Disclaimer",
+              "content": "None of the PHES sites discussed in this study have been the subject of geological, hydrological, environmental, heritage and other studies, and it is not known whether any particular site would be suitable. The commercial feasibility of developing these sites is unknown. As with all major engineering projects, diligent attention to quality assurance would be required for safety and efficacy.<p>There has been no investigation of land tenure apart from exclusion of some environmental areas and urban areas, and no discussions with land owners and managers. Nothing in this list of potential site locations implies any rights for development of these locations. Accuracy of the sites depends on the accuracy of the source data. There may be sites that fall into local protected areas or urban areas that are not identified by the source data.</p>"
+            },
+            {
+              "name": "Access and acknowledgements",
+              "content": "In publications that use this information please acknowledge the RE100 Group, Australian National University, http://re100.eng.anu.edu.au/"
+            },
+            {
+              "name": "Source Data",
+              "content": "Digital Terrain Model (DTM) https://earthexplorer.usgs.gov/ <p>World Database Protected Areas: https://www.protectedplanet.net/</p> <p>Urban extent:  HBASE http://sedac.ciesin.columbia.edu/data/set/ulandsat-hbase-v1/data-download</p> "
+            }
+          ],
+          "infoSectionOrder": [
+            "Disclaimer",
+            "Description",
+            "Access and acknowledgements",
+            "Source Data"
+          ],
+          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+          "opacity": 1,
+          "layers": "paute:guarainag",
+          "featureInfoTemplate": {
+            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+          },
+          "tileErrorHandlingOptions": {
+            "ignoreUnknownTileErrors": true
+          },
+          "shareKeys": [
+            "Root Group/Renewable Energy/Hydro/Storage/ANU STORES Worldwide/Pumped hydro: 150GWh 18h"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "base-paute",
+      "type": "group",
+      "name": "Cartografía Base - Paute",
+      "description": "Cartografía de de Paute, Ecuador",
+      "isOpen": true,
+      "members": [
+        {
+          "type": "wms",
+          "name": "Cantón Paute",
+          "id": "canton_paute",
+          "isGeoServer": true,
+          "info": [
+            {
+              "name": "Description",
+              "content": "División política del cantón Paute, Ecuador"
+            }
+          ],
+          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+          "opacity": 1,
+          "layers": "paute:canton_paute",
+          "tileErrorHandlingOptions": {
+            "ignoreUnknownTileErrors": true
+          },
+          "show": true,
+          "isOpenInWorkbench": false
+        },
+        {
+          "type": "wms",
+          "name": "Parroquias del cantón Paute",
+          "id": "parroquias_paute",
+          "isGeoServer": true,
+          "info": [
+            {
+              "name": "Description",
+              "content": "División política de las parroquias del cantón Paute, Ecuador"
+            }
+          ],
+          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+          "opacity": 1,
+          "layers": "paute:parroquias_paute",
+          "tileErrorHandlingOptions": {
+            "ignoreUnknownTileErrors": true
+          },
+          "show": true,
+          "isOpenInWorkbench": false
+        }
+      ]
+    },
+    {
+      "type": "terria-reference",
+      "url": "https://raw.githubusercontent.com/ubica-ecuador/catalogo-geoportal-ecuador/main/catalogo.json",
+      "isGroup": true,
+      "name": "Catálogo de Datos Geoespaciales de Ecuador - GeoEcuador",
+      "id": "ubica-ec-geoportal-ecuador",
+      "isOpen": true,
+      "description": "Catálogo de Datos Geoespaciales de Ecuador",
+      "dataCustodian": "UBICA Ecuador"
+    }
+  ],
+  "workbench": ["canton_paute", "parroquias_paute"],
+  "viewerMode": "3d",
+  "baseMaps": {
+    "defaultBaseMapId": "basemap-positron-light",
+    "previewBaseMapId": "basemap-positron-light",
+    "enabledBaseMaps": [
+      "basemap-bing-aerial",
+      "basemap-bing-aerial-with-labels",
+      "basemap-positron-light",
+      "basemap-darkmatter"
+    ],
+    "items": [
+      {
+        "contrastColor": "#ffffff",
+        "image": "images/bing.png",
+        "item": {
+          "id": "basemap-bing-aerial",
+          "members": [
+            {
+              "id": "basemap-bing-aerial-imagery",
+              "ionAssetId": 2,
+              "name": "Bing Maps Aerial",
+              "opacity": 1,
+              "type": "ion-imagery"
+            },
+            {
+              "id": "terrain",
+              "type": "cesium-terrain"
+            }
+          ],
+          "name": "Bing Maps",
+          "type": "composite"
+        }
+      },
+      {
+        "contrastColor": "#ffffff",
+        "image": "images/labels.png",
+        "item": {
+          "id": "basemap-bing-aerial-with-labels",
+          "members": [
+            {
+              "id": "basemap-bing-aerial-with-labels-imagery",
+              "ionAssetId": 3,
+              "name": "Bing Maps Aerial With Labels",
+              "opacity": 1,
+              "type": "ion-imagery"
+            },
+            {
+              "id": "terrain",
+              "type": "cesium-terrain"
+            }
+          ],
+          "name": "Bing Maps With Labels",
+          "type": "composite"
+        }
+      },
+      {
+        "contrastColor": "#000000",
+        "image": "images/osm.png",
+        "item": {
+          "id": "basemap-positron-light",
+          "members": [
+            {
+              "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/about-carto/'>CARTO</a>",
+              "id": "/basemap//Positron (Light)/imagery",
+              "name": "Positron (Light)",
+              "opacity": 1,
+              "subdomains": ["a", "b", "c", "d"],
+              "type": "open-street-map",
+              "url": "https://basemaps.cartocdn.com/light_all/"
+            },
+            {
+              "id": "terrain",
+              "type": "cesium-terrain"
+            }
+          ],
+          "name": "Positron (Light)",
+          "type": "composite"
+        }
+      },
+      {
+        "contrastColor": "#ffffff",
+        "image": "images/dark.png",
+        "item": {
+          "id": "basemap-darkmatter",
+          "members": [
+            {
+              "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/about-carto/'>CARTO</a>",
+              "id": "/basemap//Dark Matter/imagery",
+              "name": "Dark Matter",
+              "opacity": 1,
+              "subdomains": ["a", "b", "c", "d"],
+              "type": "open-street-map",
+              "url": "https://basemaps.cartocdn.com/dark_all/"
+            },
+            {
+              "id": "terrain",
+              "type": "cesium-terrain"
+            }
+          ],
+          "name": "Dark Matter",
+          "type": "composite"
+        }
+      }
+    ]
+  }
+}
