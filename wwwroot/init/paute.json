@@ -18,6 +18,7 @@
           "name": "Paute - Cabecera Cantonal",
           "id": "paute",
           "isGeoServer": true,
+          "zoomOnAddToWorkbench": true,
           "info": [
             {
               "name": "Description",
@@ -60,6 +61,7 @@
           "name": "Parroquia Guarainag",
           "id": "c855dca8",
           "isGeoServer": true,
+          "zoomOnAddToWorkbench": true,
           "info": [
             {
               "name": "Description",
