@@ -5,6 +5,9 @@ FROM node:20 AS develop
 FROM node:20 AS build
 USER node
 
+ENV YARN_CACHE_FOLDER=/tmp/.yarn-cache
+RUN mkdir -p "$YARN_CACHE_FOLDER"
+
 COPY --chown=node:node . /app
 
 WORKDIR /app
