@@ -178,21 +178,10 @@
         "image": "images/bing.png",
         "item": {
           "id": "basemap-bing-aerial",
-          "members": [
-            {
-              "id": "basemap-bing-aerial-imagery",
-              "ionAssetId": 2,
-              "name": "Bing Maps Aerial",
-              "opacity": 1,
-              "type": "ion-imagery"
-            },
-            {
-              "id": "terrain",
-              "type": "cesium-terrain"
-            }
-          ],
           "name": "Bing Maps",
-          "type": "composite"
+          "type": "ion-imagery",
+          "ionAssetId": 2,
+          "opacity": 1
         }
       },
       {
@@ -200,21 +189,10 @@
         "image": "images/labels.png",
         "item": {
           "id": "basemap-bing-aerial-with-labels",
-          "members": [
-            {
-              "id": "basemap-bing-aerial-with-labels-imagery",
-              "ionAssetId": 3,
-              "name": "Bing Maps Aerial With Labels",
-              "opacity": 1,
-              "type": "ion-imagery"
-            },
-            {
-              "id": "terrain",
-              "type": "cesium-terrain"
-            }
-          ],
           "name": "Bing Maps With Labels",
-          "type": "composite"
+          "type": "ion-imagery",
+          "ionAssetId": 3,
+          "opacity": 1
         }
       },
       {
@@ -222,23 +200,12 @@
         "image": "images/osm.png",
         "item": {
           "id": "basemap-positron-light",
-          "members": [
-            {
-              "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/about-carto/'>CARTO</a>",
-              "id": "/basemap//Positron (Light)/imagery",
-              "name": "Positron (Light)",
-              "opacity": 1,
-              "subdomains": ["a", "b", "c", "d"],
-              "type": "open-street-map",
-              "url": "https://basemaps.cartocdn.com/light_all/"
-            },
-            {
-              "id": "terrain",
-              "type": "cesium-terrain"
-            }
-          ],
           "name": "Positron (Light)",
-          "type": "composite"
+          "type": "open-street-map",
+          "url": "https://basemaps.cartocdn.com/light_all/",
+          "subdomains": ["a", "b", "c", "d"],
+          "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/about-carto/'>CARTO</a>",
+          "opacity": 1
         }
       },
       {
@@ -246,23 +213,12 @@
         "image": "images/dark.png",
         "item": {
           "id": "basemap-darkmatter",
-          "members": [
-            {
-              "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/about-carto/'>CARTO</a>",
-              "id": "/basemap//Dark Matter/imagery",
-              "name": "Dark Matter",
-              "opacity": 1,
-              "subdomains": ["a", "b", "c", "d"],
-              "type": "open-street-map",
-              "url": "https://basemaps.cartocdn.com/dark_all/"
-            },
-            {
-              "id": "terrain",
-              "type": "cesium-terrain"
-            }
-          ],
           "name": "Dark Matter",
-          "type": "composite"
+          "type": "open-street-map",
+          "url": "https://basemaps.cartocdn.com/dark_all/",
+          "subdomains": ["a", "b", "c", "d"],
+          "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/about-carto/'>CARTO</a>",
+          "opacity": 1
         }
       }
     ]
