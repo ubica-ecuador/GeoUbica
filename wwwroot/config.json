@@ -235,7 +235,11 @@
         "term": "translate#helpContentTerm8.term",
         "content": "translate#helpContentTerm8.content"
       }
-    ]
+    ],
+    // "bingMapsKey": "2YOKSdOdEeH9gQOQpElOrW0oAQv0mao6bRbpVB4sFCij3WNj8RKJQQJ99CCACYeBjFe0f5JAAAgAZMP1uEQ",
+    "useCesiumIonTerrain": true,
+    "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5OGQzODVjNi0zNmFkLTQzY2YtOGI5Yy0zMjkxZGFjY2I0ZTciLCJpZCI6MTMyOTgsImlhdCI6MTc3NTk1NTc1N30.fWySBYkAPNWkDuR9Gf0XNSk3qudhsu0oiqpF3n_dCaM",
+    "useCesiumIonBingImagery": true
     // Or direct strings
     // "helpContent": [
     //   {
@@ -368,9 +372,5 @@
     //       content: "The way the dataset appears in the preview window. We recommend true colour to search for cloud-free images"
     //   }
     // ]
-  },
-  // "bingMapsKey": "2YOKSdOdEeH9gQOQpElOrW0oAQv0mao6bRbpVB4sFCij3WNj8RKJQQJ99CCACYeBjFe0f5JAAAgAZMP1uEQ",
-  "useCesiumIonTerrain": true,
-  "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkMTExOTJlMC04ODI5LTRjNmMtOTdiZi0zMDdhM2Q4MzZhODMiLCJpZCI6MTMyOTgsImlhdCI6MTc3MjUxMDk2Nn0.3nEodQMmW1W5enDojtMWowKLlRnPTrlryc0fjL54KhY",
-  "useCesiumIonBingImagery": true
+  }
 }
