@@ -23,6 +23,8 @@
     "gov.uk",
     "gov.nz",
     "services.aremi.data61.io",
-    "localhost:8600"
+    "localhost:8600",
+    "www.geoarca.gob.ec:8080",
+    "geoarca.gob.ec:8080"
   ]
 }
