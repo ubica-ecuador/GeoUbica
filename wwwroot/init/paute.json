@@ -14,364 +14,1360 @@
       "isOpen": true,
       "members": [
         {
-          "type": "wms",
-          "name": "Paute - Cabecera Cantonal",
-          "id": "paute",
-          "isGeoServer": true,
-          "zoomOnAddToWorkbench": true,
-          "info": [
+          "id": "grp-parroquia-paute",
+          "type": "group",
+          "name": "Paute",
+          "description": "Ortofoto, curvas de nivel y MDT — cabecera cantonal",
+          "isOpen": false,
+          "members": [
             {
-              "name": "Descripción",
-              "content": "<p><strong>Ortofotografía — cabecera cantonal (bloque PAUTE).</strong> Producto del proyecto <em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute — Fase 1</em>, según TDR. Objetivo: nueva base geoespacial de alta resolución para planificación territorial, administración del suelo y apoyo a procesos catastrales.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "name": "Ortofotografía — Paute (cabecera cantonal)",
+              "id": "paute",
+              "layers": "paute:paute",
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "zoomOnAddToWorkbench": true,
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Ortofotografía — cabecera cantonal (bloque PAUTE).</strong> Producto del proyecto <em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute — Fase 1</em>, según TDR. Objetivo: nueva base geoespacial de alta resolución para planificación territorial, administración del suelo y apoyo a procesos catastrales.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+                },
+                {
+                  "name": "Metodología y equipos",
+                  "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional; apoyo y control fotoidentificable con precisión centimétrica.</p><p><strong>Adquisición:</strong> dron DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB). Pix4D considera sensor RGB 35,000 mm × 23,328 mm; imagen 8192 × 5460 px.</p><p><strong>Vuelo y georreferenciación:</strong> traslape longitudinal y transversal ~80 %; altura constante; RTK embarcado; imágenes en WGS 84; productos en WGS 84 / UTM zona 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (estación: CPU AMD Ryzen 9 7900 12 núcleos, 127 GB RAM, GPU NVIDIA GeForce RTX 5070). Flujo: inicial, calibración y ajuste de bloque, densificación de nube de puntos, ortomosaico y DSM según bloque.</p>"
+                },
+                {
+                  "name": "Indicadores — bloque PAUTE",
+                  "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p>Valores del informe para el <strong>bloque PAUTE</strong> (procesado 2025-11-27 14:28:12).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>971,9574 ha</td></tr><tr><td>GSD medio</td><td>2,50 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>5874 de 7973 / 7973 de 7973</td></tr><tr><td>Error medio reproyección</td><td>0,058 px</td></tr><tr><td>Puntos densificados</td><td>438 138 218</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias de posición/orientación de cámara (ajuste interno Pix4D):</strong> medias X/Y/Z (m): 0,862 / 0,769 / 0,519; sigma X/Y/Z: 0,819 / 0,978 / 0,653.</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>Las precisiones consignadas provienen de los indicadores internos de Pix4D (reproyección, geolocalización, incertidumbres de cámara). <strong>No se emplearon GCP 3D</strong> en el procesamiento; las métricas reflejan consistencia interna del ajuste y diferencias entre posiciones iniciales y calculadas, <strong>no sustituyen validación externa</strong> con puntos independientes GNSS de chequeo. La aceptación final del producto debe complementarse con esos chequeos.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p><p>En publicaciones que utilicen esta información, cite el informe técnico y la entidad contratante.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Metodología y equipos",
+                "Indicadores — bloque PAUTE",
+                "Limitaciones",
+                "Entidad contratante"
+              ]
             },
             {
-              "name": "Metodología y equipos",
-              "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional; apoyo y control fotoidentificable con precisión centimétrica.</p><p><strong>Adquisición:</strong> dron DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB). Pix4D considera sensor RGB 35,000 mm × 23,328 mm; imagen 8192 × 5460 px.</p><p><strong>Vuelo y georreferenciación:</strong> traslape longitudinal y transversal ~80 %; altura constante; RTK embarcado; imágenes en WGS 84; productos en WGS 84 / UTM zona 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (estación: CPU AMD Ryzen 9 7900 12 núcleos, 127 GB RAM, GPU NVIDIA GeForce RTX 5070). Flujo: inicial, calibración y ajuste de bloque, densificación de nube de puntos, ortomosaico y DSM según bloque.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Curvas de nivel</strong> — cabecera cantonal / bloque PAUTE. Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Curvas de nivel — Paute",
+              "id": "paute_curvas_nivel",
+              "layers": "paute:paute_curvas_nivel"
             },
             {
-              "name": "Indicadores — bloque PAUTE",
-              "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p>Valores del informe para el <strong>bloque PAUTE</strong> (procesado 2025-11-27 14:28:12).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>971,9574 ha</td></tr><tr><td>GSD medio</td><td>2,50 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>5874 de 7973 / 7973 de 7973</td></tr><tr><td>Error medio reproyección</td><td>0,058 px</td></tr><tr><td>Puntos densificados</td><td>438 138 218</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias de posición/orientación de cámara (ajuste interno Pix4D):</strong> medias X/Y/Z (m): 0,862 / 0,769 / 0,519; sigma X/Y/Z: 0,819 / 0,978 / 0,653.</p>"
-            },
-            {
-              "name": "Limitaciones",
-              "content": "<p>Las precisiones consignadas provienen de los indicadores internos de Pix4D (reproyección, geolocalización, incertidumbres de cámara). <strong>No se emplearon GCP 3D</strong> en el procesamiento; las métricas reflejan consistencia interna del ajuste y diferencias entre posiciones iniciales y calculadas, <strong>no sustituyen validación externa</strong> con puntos independientes GNSS de chequeo. La aceptación final del producto debe complementarse con esos chequeos.</p>"
-            },
-            {
-              "name": "Entidad contratante",
-              "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p><p>En publicaciones que utilicen esta información, cite el informe técnico y la entidad contratante.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — cabecera cantonal / bloque PAUTE. Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:paute_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Modelo digital del terreno — Paute",
+              "id": "paute_mdt",
+              "layers": "paute:paute_dmt"
             }
-          ],
-          "infoSectionOrder": [
-            "Descripción",
-            "Metodología y equipos",
-            "Indicadores — bloque PAUTE",
-            "Limitaciones",
-            "Entidad contratante"
-          ],
-          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-          "opacity": 1,
-          "layers": "paute:paute",
-          "featureInfoTemplate": {
-            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          }
+          ]
         },
         {
-          "type": "wms",
-          "name": "Parroquia Guarainag",
-          "id": "c855dca8",
-          "isGeoServer": true,
-          "zoomOnAddToWorkbench": true,
-          "info": [
+          "id": "grp-parroquia-bulan",
+          "type": "group",
+          "name": "Bulán",
+          "isOpen": false,
+          "members": [
             {
-              "name": "Descripción",
-              "content": "<p><strong>Ortofotografía — parroquia Guarainag.</strong><em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute</em>. Base de alta resolución para gestión catastral y territorial en el ámbito parroquial.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "name": "Ortofotografía — Bulán",
+              "id": "bulan",
+              "layers": "paute:bulan",
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "zoomOnAddToWorkbench": true,
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Ortofotografía — parroquia Bulán.</strong> Proyecto Fase 1: <em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute</em>. Base de alta resolución para gestión catastral y territorial.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+                },
+                {
+                  "name": "Metodología y equipos",
+                  "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                },
+                {
+                  "name": "Resultados consolidados (Fase 1)",
+                  "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.85em; }</style><p>Cobertura total aproximada del informe: <strong>1 901,25 ha</strong>; GSD <strong>1,41–2,60 cm/px</strong>.</p><table><tr><th>Bloque</th><th>Área (ha)</th><th>GSD</th><th>Reproy. (px)</th></tr><tr><td>CHICAN</td><td>483,1184</td><td>2,60</td><td>0,057</td></tr><tr><td>El cabo</td><td>378,8028</td><td>2,38</td><td>0,075</td></tr><tr><td>PAUTE</td><td>971,9574</td><td>2,50</td><td>0,058</td></tr><tr><td>Sc3</td><td>67,3737</td><td>1,41</td><td>0,076</td></tr></table>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Metodología y equipos",
+                "Resultados consolidados (Fase 1)",
+                "Limitaciones",
+                "Entidad contratante"
+              ]
             },
             {
-              "name": "Metodología y equipos",
-              "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Curvas de nivel</strong> — parroquia Bulán. Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Curvas de nivel — Bulán",
+              "id": "bulan_curvas_nivel",
+              "layers": "paute:bulan_curvas_nivel"
             },
             {
-              "name": "Resultados consolidados (Fase 1)",
-              "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.85em; }</style><p>Resumen de los cuatro bloques documentados en el informe. La cobertura total aproximada: <strong>1 901,25 ha</strong>; <strong>15 149</strong> imágenes geolocalizadas (<strong>11 659</strong> calibradas en el ajuste). El GSD del proyecto se sitúa entre <strong>1,41</strong> y <strong>2,60 cm/px</strong> (por debajo del límite de 3 cm/px del TDR para ortomosaico).</p><table><tr><th>Bloque</th><th>Fecha proceso</th><th>Área (ha)</th><th>GSD (cm/px)</th><th>Calibr. / Geo.</th><th>Reproy. (px)</th></tr><tr><td>CHICAN</td><td>2025-11-29</td><td>483,1184</td><td>2,60</td><td>2345/3188 · 3188/3188</td><td>0,057</td></tr><tr><td>El cabo</td><td>2025-12-02</td><td>378,8028</td><td>2,38</td><td>2351/2899 · 2899/2899</td><td>0,075</td></tr><tr><td>PAUTE</td><td>2025-11-27</td><td>971,9574</td><td>2,50</td><td>5874/7973 · 7973/7973</td><td>0,058</td></tr><tr><td>Sc3</td><td>2025-12-01</td><td>67,3737</td><td>1,41</td><td>1089/1089 · 1089/1089</td><td>0,076</td></tr></table><p>Errores medios de reproyección &lt; 0,1 px en todos los bloques (buena consistencia interna del ajuste). La geolocalización absoluta varía entre bloques; véase el informe completo para tablas de medias/sigma por bloque.</p>"
-            },
-            {
-              "name": "Limitaciones",
-              "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente. Se recomienda validación con puntos GNSS de chequeo para aceptación final.</p>"
-            },
-            {
-              "name": "Entidad contratante",
-              "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — parroquia Bulán. Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:bulan_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Modelo digital del terreno — Bulán",
+              "id": "bulan_mdt",
+              "layers": "paute:bulan_dmt"
             }
-          ],
-          "infoSectionOrder": [
-            "Descripción",
-            "Metodología y equipos",
-            "Resultados consolidados (Fase 1)",
-            "Limitaciones",
-            "Entidad contratante"
-          ],
-          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-          "opacity": 1,
-          "layers": "paute:guarainag",
-          "featureInfoTemplate": {
-            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          }
+          ]
         },
         {
-          "type": "wms",
-          "name": "Parroquia Bulán",
-          "id": "bulan",
-          "isGeoServer": true,
-          "zoomOnAddToWorkbench": true,
-          "info": [
+          "id": "grp-parroquia-chican",
+          "type": "group",
+          "name": "Chicán",
+          "isOpen": false,
+          "members": [
             {
-              "name": "Descripción",
-              "content": "<p><strong>Ortofotografía — parroquia Bulán.</strong> Proyecto Fase 1: <em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute</em>. Base de alta resolución para gestión catastral y territorial.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+              "id": "grp-chican-1",
+              "type": "group",
+              "name": "Chicán 1",
+              "isOpen": false,
+              "members": [
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "name": "Ortofotografía — Chicán 1",
+                  "id": "chican1",
+                  "layers": "paute:chican1",
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "zoomOnAddToWorkbench": true,
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Ortofotografía — Chicán 1.</strong> Subdivisión de vuelo del <strong>bloque CHICAN</strong> (Fase 1, cantón Paute).</p>"
+                    },
+                    {
+                      "name": "Metodología y equipos",
+                      "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                    },
+                    {
+                      "name": "Indicadores — bloque CHICAN (vuelo)",
+                      "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p><strong>Bloque CHICAN</strong> (procesado 2025-11-29 19:07:25).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>483,1184 ha</td></tr><tr><td>GSD medio</td><td>2,60 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>2345 de 3188 / 3188 de 3188</td></tr><tr><td>Error medio reproyección</td><td>0,057 px</td></tr><tr><td>Puntos densificados</td><td>171 358 268</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias/sigma posición cámara (m):</strong> X 1,607 / 0,943; Y 1,397 / 0,699; Z 0,851 / 0,446.</p><p><em>Nota:</em> el vuelo del bloque CHICAN se publica en GeoServer en dos teselas ortofoto (<strong>Chicán 1</strong> y <strong>Chicán 2</strong>).</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Metodología y equipos",
+                    "Indicadores — bloque CHICAN (vuelo)",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Curvas de nivel</strong> — Chicán 1 (bloque CHICAN). Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Curvas de nivel — Chicán 1",
+                  "id": "chican1_curvas_nivel",
+                  "layers": "paute:chican1_curvas_nivel"
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — Chicán 1 (bloque CHICAN). Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:chican1_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Modelo digital del terreno — Chicán 1",
+                  "id": "chican1_mdt",
+                  "layers": "paute:chican1_dmt"
+                }
+              ]
             },
             {
-              "name": "Metodología y equipos",
-              "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
-            },
-            {
-              "name": "Resultados consolidados (Fase 1)",
-              "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.85em; }</style><p>Resumen de los cuatro bloques documentados en el informe. Cobertura total aproximada: <strong>1 901,25 ha</strong>; GSD entre <strong>1,41</strong> y <strong>2,60 cm/px</strong>.</p><table><tr><th>Bloque</th><th>Área (ha)</th><th>GSD</th><th>Reproy. (px)</th></tr><tr><td>CHICAN</td><td>483,1184</td><td>2,60</td><td>0,057</td></tr><tr><td>El cabo</td><td>378,8028</td><td>2,38</td><td>0,075</td></tr><tr><td>PAUTE</td><td>971,9574</td><td>2,50</td><td>0,058</td></tr><tr><td>Sc3</td><td>67,3737</td><td>1,41</td><td>0,076</td></tr></table><p>Indicadores según Pix4D; <strong>sin GCP 3D</strong>. Validación externa recomendada.</p>"
-            },
-            {
-              "name": "Limitaciones",
-              "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
-            },
-            {
-              "name": "Entidad contratante",
-              "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+              "id": "grp-chican-2",
+              "type": "group",
+              "name": "Chicán 2",
+              "isOpen": false,
+              "members": [
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "name": "Ortofotografía — Chicán 2",
+                  "id": "chican2",
+                  "layers": "paute:chican2",
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "zoomOnAddToWorkbench": true,
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Ortofotografía — Chicán 2.</strong> Subdivisión de vuelo del <strong>bloque CHICAN</strong> (Fase 1, cantón Paute).</p>"
+                    },
+                    {
+                      "name": "Metodología y equipos",
+                      "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                    },
+                    {
+                      "name": "Indicadores — bloque CHICAN (vuelo)",
+                      "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p><strong>Bloque CHICAN</strong> (procesado 2025-11-29 19:07:25).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>483,1184 ha</td></tr><tr><td>GSD medio</td><td>2,60 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>2345 de 3188 / 3188 de 3188</td></tr><tr><td>Error medio reproyección</td><td>0,057 px</td></tr><tr><td>Puntos densificados</td><td>171 358 268</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias/sigma posición cámara (m):</strong> X 1,607 / 0,943; Y 1,397 / 0,699; Z 0,851 / 0,446.</p><p><em>Nota:</em> el vuelo del bloque CHICAN se publica en GeoServer en dos teselas ortofoto (<strong>Chicán 1</strong> y <strong>Chicán 2</strong>).</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Metodología y equipos",
+                    "Indicadores — bloque CHICAN (vuelo)",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Curvas de nivel</strong> — Chicán 2 (bloque CHICAN). Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Curvas de nivel — Chicán 2",
+                  "id": "chican2_curvas_nivel",
+                  "layers": "paute:chican2_curvas_nivel"
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — Chicán 2 (bloque CHICAN). Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:chican2_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Modelo digital del terreno — Chicán 2",
+                  "id": "chican2_mdt",
+                  "layers": "paute:chican2_dmt"
+                }
+              ]
             }
-          ],
-          "infoSectionOrder": [
-            "Descripción",
-            "Metodología y equipos",
-            "Resultados consolidados (Fase 1)",
-            "Limitaciones",
-            "Entidad contratante"
-          ],
-          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-          "opacity": 1,
-          "layers": "paute:bulan",
-          "featureInfoTemplate": {
-            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          }
+          ]
         },
         {
-          "type": "wms",
-          "name": "Parroquia Chicán",
-          "id": "chican",
-          "isGeoServer": true,
-          "zoomOnAddToWorkbench": true,
-          "info": [
+          "id": "grp-parroquia-dugdug",
+          "type": "group",
+          "name": "Dug Dug",
+          "isOpen": false,
+          "members": [
             {
-              "name": "Descripción",
-              "content": "<p><strong>Ortofotografía — parroquia Chicán.</strong> Proyecto Fase 1 del cantón Paute. La capa se asocia al <strong>bloque CHICAN</strong> del informe técnico de fotogrametría.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "name": "Ortofotografía — Dug Dug",
+              "id": "dugdug",
+              "layers": "paute:dugdug",
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "zoomOnAddToWorkbench": true,
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Ortofotografía — parroquia Dug Dug.</strong> Proyecto Fase 1: <em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute</em>.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+                },
+                {
+                  "name": "Metodología y equipos",
+                  "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                },
+                {
+                  "name": "Resultados consolidados (Fase 1)",
+                  "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.85em; }</style><p>Cobertura total aproximada del informe: <strong>1 901,25 ha</strong>; GSD <strong>1,41–2,60 cm/px</strong>.</p><table><tr><th>Bloque</th><th>Área (ha)</th><th>GSD</th><th>Reproy. (px)</th></tr><tr><td>CHICAN</td><td>483,1184</td><td>2,60</td><td>0,057</td></tr><tr><td>El cabo</td><td>378,8028</td><td>2,38</td><td>0,075</td></tr><tr><td>PAUTE</td><td>971,9574</td><td>2,50</td><td>0,058</td></tr><tr><td>Sc3</td><td>67,3737</td><td>1,41</td><td>0,076</td></tr></table>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Metodología y equipos",
+                "Resultados consolidados (Fase 1)",
+                "Limitaciones",
+                "Entidad contratante"
+              ]
             },
             {
-              "name": "Metodología y equipos",
-              "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Curvas de nivel</strong> — parroquia Dug Dug. Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Curvas de nivel — Dug Dug",
+              "id": "dugdug_curvas_nivel",
+              "layers": "paute:dug_dug_curvas_nivel"
             },
             {
-              "name": "Indicadores — bloque CHICAN",
-              "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p><strong>Bloque CHICAN</strong> (procesado 2025-11-29 19:07:25).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>483,1184 ha</td></tr><tr><td>GSD medio</td><td>2,60 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>2345 de 3188 / 3188 de 3188</td></tr><tr><td>Error medio reproyección</td><td>0,057 px</td></tr><tr><td>Puntos densificados</td><td>171 358 268</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias/sigma posición cámara (m):</strong> X 1,607 / 0,943; Y 1,397 / 0,699; Z 0,851 / 0,446.</p>"
-            },
-            {
-              "name": "Limitaciones",
-              "content": "<p>Métricas internas Pix4D; <strong>sin GCP 3D</strong>. No sustituyen validación GNSS independiente.</p>"
-            },
-            {
-              "name": "Entidad contratante",
-              "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — parroquia Dug Dug. Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:dugdug_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Modelo digital del terreno — Dug Dug",
+              "id": "dugdug_mdt",
+              "layers": "paute:dugdug_dmt"
             }
-          ],
-          "infoSectionOrder": [
-            "Descripción",
-            "Metodología y equipos",
-            "Indicadores — bloque CHICAN",
-            "Limitaciones",
-            "Entidad contratante"
-          ],
-          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-          "opacity": 1,
-          "layers": "paute:chican",
-          "featureInfoTemplate": {
-            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          }
+          ]
         },
         {
-          "type": "wms",
-          "name": "Parroquia Dug Dug",
-          "id": "dugdug",
-          "isGeoServer": true,
-          "zoomOnAddToWorkbench": true,
-          "info": [
+          "id": "grp-parroquia-elcabo",
+          "type": "group",
+          "name": "El Cabo",
+          "isOpen": false,
+          "members": [
             {
-              "name": "Descripción",
-              "content": "<p><strong>Ortofotografía — parroquia Dug Dug.</strong> Proyecto Fase 1: <em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute</em>.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+              "id": "grp-elcabo-1",
+              "type": "group",
+              "name": "El Cabo 1",
+              "isOpen": false,
+              "members": [
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "name": "Ortofotografía — El Cabo 1",
+                  "id": "elcabo1",
+                  "layers": "paute:el_cabo1",
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "zoomOnAddToWorkbench": true,
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Ortofotografía — El Cabo 1.</strong> Subdivisión de vuelo del <strong>bloque El cabo</strong> (Fase 1).</p>"
+                    },
+                    {
+                      "name": "Metodología y equipos",
+                      "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                    },
+                    {
+                      "name": "Indicadores — bloque El cabo (vuelo)",
+                      "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p><strong>Bloque El cabo</strong> (procesado 2025-12-02 09:51:46).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>378,8028 ha</td></tr><tr><td>GSD medio</td><td>2,38 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>2351 de 2899 / 2899 de 2899</td></tr><tr><td>Error medio reproyección</td><td>0,075 px</td></tr><tr><td>Puntos densificados</td><td>161 461 584</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias/sigma posición cámara (m):</strong> X 0,189 / 0,154; Y 0,162 / 0,144; Z 0,242 / 0,351.</p><p><em>Nota:</em> la ortofoto del bloque se publica como <strong>El Cabo 1</strong> y <strong>El Cabo 2</strong> en GeoServer.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Metodología y equipos",
+                    "Indicadores — bloque El cabo (vuelo)",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Curvas de nivel</strong> — El Cabo 1 (bloque El cabo). Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Curvas de nivel — El Cabo 1",
+                  "id": "elcabo1_curvas_nivel",
+                  "layers": "paute:el_cabo_1_curvas_nivel"
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — El Cabo 1 (bloque El cabo). Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:el_cabo1_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Modelo digital del terreno — El Cabo 1",
+                  "id": "elcabo1_mdt",
+                  "layers": "paute:el_cabo1_dmt"
+                }
+              ]
             },
             {
-              "name": "Metodología y equipos",
-              "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape ~80 %; RTK embarcado; WGS 84 / UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6.</p>"
-            },
-            {
-              "name": "Resultados consolidados (Fase 1)",
-              "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.85em; }</style><p>Cobertura total aproximada del informe: <strong>1 901,25 ha</strong>; GSD <strong>1,41–2,60 cm/px</strong>.</p><table><tr><th>Bloque</th><th>Área (ha)</th><th>GSD</th><th>Reproy. (px)</th></tr><tr><td>CHICAN</td><td>483,1184</td><td>2,60</td><td>0,057</td></tr><tr><td>El cabo</td><td>378,8028</td><td>2,38</td><td>0,075</td></tr><tr><td>PAUTE</td><td>971,9574</td><td>2,50</td><td>0,058</td></tr><tr><td>Sc3</td><td>67,3737</td><td>1,41</td><td>0,076</td></tr></table>"
-            },
-            {
-              "name": "Limitaciones",
-              "content": "<p>Indicadores Pix4D; <strong>sin GCP 3D</strong>. Se recomienda validación con puntos GNSS de chequeo.</p>"
-            },
-            {
-              "name": "Entidad contratante",
-              "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+              "id": "grp-elcabo-2",
+              "type": "group",
+              "name": "El Cabo 2",
+              "isOpen": false,
+              "members": [
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "name": "Ortofotografía — El Cabo 2",
+                  "id": "elcabo2",
+                  "layers": "paute:el_cabo2",
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "zoomOnAddToWorkbench": true,
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Ortofotografía — El Cabo 2.</strong> Subdivisión de vuelo del <strong>bloque El cabo</strong> (Fase 1).</p>"
+                    },
+                    {
+                      "name": "Metodología y equipos",
+                      "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                    },
+                    {
+                      "name": "Indicadores — bloque El cabo (vuelo)",
+                      "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p><strong>Bloque El cabo</strong> (procesado 2025-12-02 09:51:46).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>378,8028 ha</td></tr><tr><td>GSD medio</td><td>2,38 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>2351 de 2899 / 2899 de 2899</td></tr><tr><td>Error medio reproyección</td><td>0,075 px</td></tr><tr><td>Puntos densificados</td><td>161 461 584</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias/sigma posición cámara (m):</strong> X 0,189 / 0,154; Y 0,162 / 0,144; Z 0,242 / 0,351.</p><p><em>Nota:</em> la ortofoto del bloque se publica como <strong>El Cabo 1</strong> y <strong>El Cabo 2</strong> en GeoServer.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Metodología y equipos",
+                    "Indicadores — bloque El cabo (vuelo)",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Curvas de nivel</strong> — El Cabo 2 (bloque El cabo). Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Curvas de nivel — El Cabo 2",
+                  "id": "elcabo2_curvas_nivel",
+                  "layers": "paute:el_cabo_2_curvas_nivel"
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — El Cabo 2 (bloque El cabo). Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:el_cabo2_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Modelo digital del terreno — El Cabo 2",
+                  "id": "elcabo2_mdt",
+                  "layers": "paute:el_cabo2_dmt"
+                }
+              ]
             }
-          ],
-          "infoSectionOrder": [
-            "Descripción",
-            "Metodología y equipos",
-            "Resultados consolidados (Fase 1)",
-            "Limitaciones",
-            "Entidad contratante"
-          ],
-          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-          "opacity": 1,
-          "layers": "paute:dugdug",
-          "featureInfoTemplate": {
-            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          }
+          ]
         },
         {
-          "type": "wms",
-          "name": "Parroquia El Cabo",
-          "id": "elcabo",
-          "isGeoServer": true,
-          "zoomOnAddToWorkbench": true,
-          "info": [
+          "id": "grp-parroquia-guarainag",
+          "type": "group",
+          "name": "Guarainag",
+          "isOpen": false,
+          "members": [
             {
-              "name": "Descripción",
-              "content": "<p><strong>Ortofotografía — parroquia El Cabo.</strong> Proyecto Fase 1 del cantón Paute. Capa asociada al <strong>bloque El cabo</strong> del informe técnico.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "name": "Ortofotografía — Guarainag",
+              "id": "guarainag",
+              "layers": "paute:guarainag",
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "zoomOnAddToWorkbench": true,
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Ortofotografía — parroquia Guarainag.</strong><em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute</em>. Base de alta resolución para gestión catastral y territorial en el ámbito parroquial.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+                },
+                {
+                  "name": "Metodología y equipos",
+                  "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                },
+                {
+                  "name": "Resultados consolidados (Fase 1)",
+                  "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.85em; }</style><p>Resumen de los cuatro bloques documentados en el informe. La cobertura total aproximada: <strong>1 901,25 ha</strong>; <strong>15 149</strong> imágenes geolocalizadas (<strong>11 659</strong> calibradas en el ajuste). El GSD del proyecto se sitúa entre <strong>1,41</strong> y <strong>2,60 cm/px</strong> (por debajo del límite de 3 cm/px del TDR para ortomosaico).</p><table><tr><th>Bloque</th><th>Fecha proceso</th><th>Área (ha)</th><th>GSD (cm/px)</th><th>Calibr. / Geo.</th><th>Reproy. (px)</th></tr><tr><td>CHICAN</td><td>2025-11-29</td><td>483,1184</td><td>2,60</td><td>2345/3188 · 3188/3188</td><td>0,057</td></tr><tr><td>El cabo</td><td>2025-12-02</td><td>378,8028</td><td>2,38</td><td>2351/2899 · 2899/2899</td><td>0,075</td></tr><tr><td>PAUTE</td><td>2025-11-27</td><td>971,9574</td><td>2,50</td><td>5874/7973 · 7973/7973</td><td>0,058</td></tr><tr><td>Sc3</td><td>2025-12-01</td><td>67,3737</td><td>1,41</td><td>1089/1089 · 1089/1089</td><td>0,076</td></tr></table><p>Errores medios de reproyección &lt; 0,1 px en todos los bloques (buena consistencia interna del ajuste). La geolocalización absoluta varía entre bloques; véase el informe completo para tablas de medias/sigma por bloque.</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente. Se recomienda validación con puntos GNSS de chequeo para aceptación final.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Metodología y equipos",
+                "Resultados consolidados (Fase 1)",
+                "Limitaciones",
+                "Entidad contratante"
+              ]
             },
             {
-              "name": "Metodología y equipos",
-              "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Curvas de nivel</strong> — parroquia Guarainag. Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Curvas de nivel — Guarainag",
+              "id": "guarainag_curvas_nivel",
+              "layers": "paute:guarainag_curvas_nivel"
             },
             {
-              "name": "Indicadores — bloque El cabo",
-              "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p><strong>Bloque El cabo</strong> (procesado 2025-12-02 09:51:46).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>378,8028 ha</td></tr><tr><td>GSD medio</td><td>2,38 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>2351 de 2899 / 2899 de 2899</td></tr><tr><td>Error medio reproyección</td><td>0,075 px</td></tr><tr><td>Puntos densificados</td><td>161 461 584</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias/sigma posición cámara (m):</strong> X 0,189 / 0,154; Y 0,162 / 0,144; Z 0,242 / 0,351.</p>"
-            },
-            {
-              "name": "Limitaciones",
-              "content": "<p>Métricas internas Pix4D; <strong>sin GCP 3D</strong>. No sustituyen validación GNSS independiente.</p>"
-            },
-            {
-              "name": "Entidad contratante",
-              "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — parroquia Guarainag. Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:guarainag_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Modelo digital del terreno — Guarainag",
+              "id": "guarainag_mdt",
+              "layers": "paute:guarainag_dmt"
             }
-          ],
-          "infoSectionOrder": [
-            "Descripción",
-            "Metodología y equipos",
-            "Indicadores — bloque El cabo",
-            "Limitaciones",
-            "Entidad contratante"
-          ],
-          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-          "opacity": 1,
-          "layers": "paute:elcabo",
-          "featureInfoTemplate": {
-            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          }
+          ]
         },
         {
-          "type": "wms",
-          "name": "Parroquia San Cristóbal",
-          "id": "sancristobal",
-          "isGeoServer": true,
-          "zoomOnAddToWorkbench": true,
-          "info": [
+          "id": "grp-parroquia-sancristobal",
+          "type": "group",
+          "name": "San Cristóbal",
+          "isOpen": false,
+          "members": [
             {
-              "name": "Descripción",
-              "content": "<p><strong>Ortofotografía — parroquia San Cristóbal.</strong> Proyecto Fase 1 del cantón Paute. La capa se documenta con el <strong>bloque Sc3</strong> del informe técnico (ortomosaico de alta resolución).</p>"
+              "id": "grp-sc-1",
+              "type": "group",
+              "name": "San Cristóbal 1",
+              "isOpen": false,
+              "members": [
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "name": "Ortofotografía — San Cristóbal 1",
+                  "id": "sancristobal1",
+                  "layers": "paute:san_cristobal_1",
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "zoomOnAddToWorkbench": true,
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Ortofotografía — San Cristóbal 1.</strong> Subdivisión de cobertura del <strong>bloque Sc3</strong> (parroquia San Cristóbal, Fase 1).</p>"
+                    },
+                    {
+                      "name": "Metodología y equipos",
+                      "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                    },
+                    {
+                      "name": "Indicadores — bloque Sc3 (cobertura)",
+                      "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p><strong>Bloque Sc3</strong> (procesado 2025-12-01 13:46:51).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>67,3737 ha</td></tr><tr><td>GSD medio</td><td>1,41 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>1089 de 1089 / 1089 de 1089</td></tr><tr><td>Error medio reproyección</td><td>0,076 px</td></tr><tr><td>Puntos densificados</td><td>310 874 866</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias/sigma posición cámara (m):</strong> X 0,147 / 0,029; Y 0,146 / 0,029; Z 0,304 / 0,055.</p><p><em>Nota:</em> la cobertura del bloque Sc3 se publica como <strong>San Cristóbal 1</strong> y <strong>San Cristóbal 2</strong> en GeoServer.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Metodología y equipos",
+                    "Indicadores — bloque Sc3 (cobertura)",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Curvas de nivel</strong> — San Cristóbal 1 (bloque Sc3). Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Curvas de nivel — San Cristóbal 1",
+                  "id": "sancristobal1_curvas_nivel",
+                  "layers": "paute:san_cristobal_1_curvas_nivel"
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — San Cristóbal 1 (bloque Sc3). Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:san_cristobal_1_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Modelo digital del terreno — San Cristóbal 1",
+                  "id": "sancristobal1_mdt",
+                  "layers": "paute:san_cristobal_1_dmt"
+                }
+              ]
             },
             {
-              "name": "Metodología y equipos",
-              "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6.</p>"
-            },
-            {
-              "name": "Indicadores — bloque Sc3",
-              "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p><strong>Bloque Sc3</strong> (procesado 2025-12-01 13:46:51).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>67,3737 ha</td></tr><tr><td>GSD medio</td><td>1,41 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>1089 de 1089 / 1089 de 1089</td></tr><tr><td>Error medio reproyección</td><td>0,076 px</td></tr><tr><td>Puntos densificados</td><td>310 874 866</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias/sigma posición cámara (m):</strong> X 0,147 / 0,029; Y 0,146 / 0,029; Z 0,304 / 0,055.</p>"
-            },
-            {
-              "name": "Limitaciones",
-              "content": "<p>Métricas internas Pix4D; <strong>sin GCP 3D</strong>. No sustituyen validación GNSS independiente.</p>"
-            },
-            {
-              "name": "Entidad contratante",
-              "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+              "id": "grp-sc-2",
+              "type": "group",
+              "name": "San Cristóbal 2",
+              "isOpen": false,
+              "members": [
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "name": "Ortofotografía — San Cristóbal 2",
+                  "id": "sancristobal2",
+                  "layers": "paute:san_cristobal_2",
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "zoomOnAddToWorkbench": true,
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Ortofotografía — San Cristóbal 2.</strong> Subdivisión de cobertura del <strong>bloque Sc3</strong> (parroquia San Cristóbal, Fase 1).</p>"
+                    },
+                    {
+                      "name": "Metodología y equipos",
+                      "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                    },
+                    {
+                      "name": "Indicadores — bloque Sc3 (cobertura)",
+                      "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.9em; }</style><p><strong>Bloque Sc3</strong> (procesado 2025-12-01 13:46:51).</p><table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Área</td><td>67,3737 ha</td></tr><tr><td>GSD medio</td><td>1,41 cm/px</td></tr><tr><td>Imágenes calibradas / geolocalizadas</td><td>1089 de 1089 / 1089 de 1089</td></tr><tr><td>Error medio reproyección</td><td>0,076 px</td></tr><tr><td>Puntos densificados</td><td>310 874 866</td></tr><tr><td>Georreferenciación</td><td>Sí, sin GCP 3D</td></tr></table><p><strong>Medias/sigma posición cámara (m):</strong> X 0,147 / 0,029; Y 0,146 / 0,029; Z 0,304 / 0,055.</p><p><em>Nota:</em> la cobertura del bloque Sc3 se publica como <strong>San Cristóbal 1</strong> y <strong>San Cristóbal 2</strong> en GeoServer.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Metodología y equipos",
+                    "Indicadores — bloque Sc3 (cobertura)",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ]
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Curvas de nivel</strong> — San Cristóbal 2 (bloque Sc3). Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Curvas de nivel — San Cristóbal 2",
+                  "id": "sancristobal2_curvas_nivel",
+                  "layers": "paute:san_cristobal_2_curvas_nivel"
+                },
+                {
+                  "type": "wms",
+                  "isGeoServer": true,
+                  "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+                  "opacity": 1,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "info": [
+                    {
+                      "name": "Descripción",
+                      "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — San Cristóbal 2 (bloque Sc3). Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:san_cristobal_2_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                    },
+                    {
+                      "name": "Limitaciones",
+                      "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                    },
+                    {
+                      "name": "Entidad contratante",
+                      "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                    }
+                  ],
+                  "infoSectionOrder": [
+                    "Descripción",
+                    "Limitaciones",
+                    "Entidad contratante"
+                  ],
+                  "featureInfoTemplate": {
+                    "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+                  },
+                  "name": "Modelo digital del terreno — San Cristóbal 2",
+                  "id": "sancristobal2_mdt",
+                  "layers": "paute:san_cristobal_1_dmt"
+                }
+              ]
             }
-          ],
-          "infoSectionOrder": [
-            "Descripción",
-            "Metodología y equipos",
-            "Indicadores — bloque Sc3",
-            "Limitaciones",
-            "Entidad contratante"
-          ],
-          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-          "opacity": 1,
-          "layers": "paute:sancristobal",
-          "featureInfoTemplate": {
-            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          }
+          ]
         },
         {
-          "type": "wms",
-          "name": "Parroquia Tomebamba",
-          "id": "tomebamba",
-          "isGeoServer": true,
-          "zoomOnAddToWorkbench": true,
-          "info": [
+          "id": "grp-parroquia-tomebamba",
+          "type": "group",
+          "name": "Tomebamba",
+          "isOpen": false,
+          "members": [
             {
-              "name": "Descripción",
-              "content": "<p><strong>Ortofotografía — parroquia Tomebamba.</strong> Proyecto Fase 1: <em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute</em>.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "name": "Ortofotografía — Tomebamba",
+              "id": "tomebamba",
+              "layers": "paute:tomebamba",
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "zoomOnAddToWorkbench": true,
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Ortofotografía — parroquia Tomebamba.</strong> Proyecto Fase 1: <em>Actualización de ortofotografía urbana y de centros poblados rurales y deslinde predial de los centros poblados rurales por parroquia del cantón Paute</em>.</p><p><strong>Informe técnico de referencia:</strong> INFORME TÉCNICO V1 — Levantamiento GNSS RTK y fotogrametría aérea con dron RTK.</p>"
+                },
+                {
+                  "name": "Metodología y equipos",
+                  "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape longitudinal y transversal ~80 %; RTK embarcado; WGS 84 / salida WGS 84 UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6 (AMD Ryzen 9 7900, 127 GB RAM, NVIDIA GeForce RTX 5070).</p>"
+                },
+                {
+                  "name": "Resultados consolidados (Fase 1)",
+                  "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.85em; }</style><p>Cobertura total aproximada del informe: <strong>1 901,25 ha</strong>; GSD <strong>1,41–2,60 cm/px</strong>.</p><table><tr><th>Bloque</th><th>Área (ha)</th><th>GSD</th><th>Reproy. (px)</th></tr><tr><td>CHICAN</td><td>483,1184</td><td>2,60</td><td>0,057</td></tr><tr><td>El cabo</td><td>378,8028</td><td>2,38</td><td>0,075</td></tr><tr><td>PAUTE</td><td>971,9574</td><td>2,50</td><td>0,058</td></tr><tr><td>Sc3</td><td>67,3737</td><td>1,41</td><td>0,076</td></tr></table>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>Indicadores de calidad según Pix4D; <strong>sin GCP 3D</strong>. No equivalen a verificación externa independiente.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Metodología y equipos",
+                "Resultados consolidados (Fase 1)",
+                "Limitaciones",
+                "Entidad contratante"
+              ]
             },
             {
-              "name": "Metodología y equipos",
-              "content": "<p><strong>Control GNSS RTK:</strong> receptor Allien GNSS RTK; red local vinculada a la red geodésica nacional.</p><p><strong>Adquisición:</strong> DJI Matrice 300 RTK; cámara ZenmuseP1_35.0_8192x5460 (RGB).</p><p><strong>Vuelo:</strong> traslape ~80 %; RTK embarcado; WGS 84 / UTM 17S.</p><p><strong>Procesamiento:</strong> Pix4Denterprise 4.5.6.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Curvas de nivel</strong> — parroquia Tomebamba. Derivación cartográfica asociada al levantamiento fotogramétrico Fase 1 (Pix4D / bloques del informe técnico). Sirven como apoyo visual del relieve sobre la ortofotografía.</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>La precisión altimétrica depende del modelo de elevación de origen y de la equidistancia adoptada en la generación. Debe contrastarse con el MDT y puntos de control GNSS para usos que exijan cotas oficiales.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Curvas de nivel — Tomebamba",
+              "id": "tomebamba_curvas_nivel",
+              "layers": "paute:tomebamba_curvas_nivel"
             },
             {
-              "name": "Resultados consolidados (Fase 1)",
-              "content": "<style>table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; text-align: center; font-size: 0.85em; }</style><p>Cobertura total aproximada del informe: <strong>1 901,25 ha</strong>; GSD <strong>1,41–2,60 cm/px</strong>.</p><table><tr><th>Bloque</th><th>Área (ha)</th><th>GSD</th><th>Reproy. (px)</th></tr><tr><td>CHICAN</td><td>483,1184</td><td>2,60</td><td>0,057</td></tr><tr><td>El cabo</td><td>378,8028</td><td>2,38</td><td>0,075</td></tr><tr><td>PAUTE</td><td>971,9574</td><td>2,50</td><td>0,058</td></tr><tr><td>Sc3</td><td>67,3737</td><td>1,41</td><td>0,076</td></tr></table>"
-            },
-            {
-              "name": "Limitaciones",
-              "content": "<p>Indicadores Pix4D; <strong>sin GCP 3D</strong>. Se recomienda validación con puntos GNSS de chequeo.</p>"
-            },
-            {
-              "name": "Entidad contratante",
-              "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+              "type": "wms",
+              "isGeoServer": true,
+              "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "opacity": 1,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "info": [
+                {
+                  "name": "Descripción",
+                  "content": "<p><strong>Modelo digital del terreno (MDT)</strong> — parroquia Tomebamba. Representación raster del relieve de la zona de vuelo, en coherencia con el producto fotogramétrico Fase 1.</p><p><strong>Capa GeoServer:</strong> <code>paute:tomebamba_dmt</code>. Si la capa aún no está publicada, debe crearse en el workspace <code>paute</code> con el nombre indicado, siguiendo la convención <code>{prefijo}_dmt</code> usada en Guarainag (<code>guarainag_dmt</code>).</p>"
+                },
+                {
+                  "name": "Limitaciones",
+                  "content": "<p>El MDT refleja la superficie modelada en el procesamiento fotogramétrico; no sustituye levantamientos topográficos de precisión para obra civil sin validación adicional.</p>"
+                },
+                {
+                  "name": "Entidad contratante",
+                  "content": "<p><strong>GAD Municipal del cantón Paute</strong> — Dirección de Avalúos y Catastros.</p>"
+                }
+              ],
+              "infoSectionOrder": [
+                "Descripción",
+                "Limitaciones",
+                "Entidad contratante"
+              ],
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "name": "Modelo digital del terreno — Tomebamba",
+              "id": "tomebamba_mdt",
+              "layers": "paute:tomebamba_dmt"
             }
-          ],
-          "infoSectionOrder": [
-            "Descripción",
-            "Metodología y equipos",
-            "Resultados consolidados (Fase 1)",
-            "Limitaciones",
-            "Entidad contratante"
-          ],
-          "url": "https://paute.ubica.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-          "opacity": 1,
-          "layers": "paute:tomebamba",
-          "featureInfoTemplate": {
-            "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
-          },
-          "tileErrorHandlingOptions": {
-            "ignoreUnknownTileErrors": true
-          }
+          ]
         }
       ]
     },
